@@ -1,0 +1,41 @@
+<head>
+	<title>message-broker</title>
+</head>
+
+<body>
+<div class="container">
+	
+	<h1 class="clearfix">Message Bus
+		<button class="btn btn-success pull-right" id="create-message-button">
+			Create Message
+		</button>
+	</h1>
+	
+	{{#if create}}
+	{{> quickForm id="messageForm" type="normal" schema=messageSchema}}
+	{{/if}}
+	
+	<table class="table table-hovered">
+		<thead>
+		<tr>
+			<th>Created At</th>
+			<th>App</th>
+			<th>Event</th>
+			<th>Created By</th>
+		</tr>
+		</thead>
+		<tbody>
+		{{#each events}}
+		<tr>
+			<td>{{this.createdAt}}</td>
+			<td>{{this.app}}</td>
+			<td>{{this.event}}</td>
+			<td>{{this.createdBy}}</td>
+		</tr>
+		{{/each}}
+		</tbody>
+	</table>
+</div>
+</body>
+
+
