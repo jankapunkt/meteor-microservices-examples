@@ -1,0 +1,9 @@
+{
+  "jwt": {
+    "key": "0123456789",
+    "catalog": {
+      "url": "http://localhost:3000/",
+      "sub": "services/catalog"
+    }
+  }
+}
